@@ -9,4 +9,5 @@ syn on
 "set shiftwidth=4
 set ruler
 set number
+set ai
 set hlsearch
