@@ -8,12 +8,12 @@ export CLICOLOR=1
 PS1='\[\033[0;37m\]\u\[\033[0;34m\]@\[\033[0;37m\]\h \[\033[0;34m\]\w\[\033[0;36m\]\$ \[\033[0m\]'
 # PS1='\u@\h \w \$ ' # non-colored template
 
-# this is to support macports. comment out on most systems.
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+# this is to support macports. leave commented on most systems.
+# export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 
 # core command aliases
-alias grep='grep --color=auto'
-# alias ls='ls --color=auto' # uncomment for linux, leave commented for os x and some funky BSDs
+# alias grep='grep --color=auto' # uncomment for os x / bsd
+alias ls='ls --color=auto' # comment for os x and some funky BSDs
 
 # generally useful aliases
 if [ -f ~/.bash_aliases ]
