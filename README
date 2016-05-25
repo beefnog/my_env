@@ -1,4 +1,9 @@
 my_env
 ======
+This tool builds my ~/dotfiles based on runtime options. Example usage:
+./my_env.py --method={ write | symlink } --target={ linux | osx }
 
-My .whatever files for *nix-y environments.
+The first option declares whether to write new files in the home directory, or to create symlinks back to the generated files in the build directory. This argument is required.
+
+The second option declares the host architecture type.
+

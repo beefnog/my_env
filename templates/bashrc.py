@@ -1,6 +1,14 @@
-# Robby Stahl - .bashrc / .bash_profile
-# 20140810
+def per_host_aliases(hname):
+	fname = "~/.bash_aliases_" + hname
+	to_return = "# aliases specific to this host\n"
+	to_return += "if [ -f " + fname + " ]\n"
+	to_return += "then\n"
+	to_return += "\t. " + fname + "\n"
+	to_return += "fi\n\n"
+	return to_return
 
+
+header = r"""
 # this should work across everything...
 export CLICOLOR=1
 
@@ -8,24 +16,37 @@ export CLICOLOR=1
 PS1='\[\033[0;37m\]\u\[\033[0;34m\]@\[\033[0;37m\]\h \[\033[0;34m\]\w\[\033[0;36m\]\$ \[\033[0m\]'
 # PS1='\u@\h \w \$ ' # non-colored template
 
-# this is to support macports. leave commented on most systems.
-# export PATH=$PATH:/opt/local/bin:/opt/local/sbin
-
-# core command aliases
-# alias grep='grep --color=auto' # uncomment for os x / bsd
-alias ls='ls --color=auto' # comment for os x and some funky BSDs
-
 # generally useful aliases
 if [ -f ~/.bash_aliases ]
 then
 	. ~/.bash_aliases
 fi
-# aliases specific to this host from .bash_aliases_{hostname}
-if [ -f ~/.bash_aliases_beeftop ]
-then
-	. ~/.bash_aliases_beeftop
-fi
 
+"""
+
+grep_osx = r"""
+alias grep='grep --color=auto'
+
+"""
+
+grep_linux =''
+
+ls_osx = ''
+
+ls_linux = r"""
+alias ls='ls --color=auto'
+
+"""
+
+
+macports_path = r"""
+# this is to support macports. leave commented on most systems.
+# export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+
+"""
+
+
+functions = r"""
 ################
 # functions
 ################
@@ -57,4 +78,6 @@ sleep.verbose () {
                 fi
         done
 }
+
+"""
 

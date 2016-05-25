@@ -1,5 +1,5 @@
-# Robby Stahl - .screenrc
-# 20140810
+header = r"""
+# .screenrc
 
 # termcapinfo xterm* ti@:te@
 vbell off
@@ -13,4 +13,5 @@ hardstatus string "%{bk}H: %H | %{ck}%c%{bk} | %{ck}%-w%{mk}%n %t%{ck}%+w "
 
 # default windows
 screen -t L 0 bash
+"""
 
