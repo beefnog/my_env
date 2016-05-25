@@ -7,3 +7,6 @@ The first option declares whether to write new files in the home directory, or t
 
 The second option declares the host architecture type.
 
+
+
+The .bash_aliases* files are not included in the public repository. This is intentional.
