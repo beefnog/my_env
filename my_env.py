@@ -54,7 +54,6 @@ if m == 'write':
 		f.write(content_vim)
 	with open(fname_screen, 'w') as f:
 		f.write(content_screen)
-if m == 'symlink':
+# if m == 'symlink':
 	# TODO: implement this...
-
 
