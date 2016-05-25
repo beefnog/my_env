@@ -5,7 +5,7 @@ This tool builds my ~/dotfiles based on runtime options. Example usage:
 
 The first option declares whether to write new files in the home directory, or to create symlinks back to the generated files in the build directory. This argument is required.
 
-The second option declares the host architecture type.
+The second option declares the host architecture type. This argument is required.
 
 
 
