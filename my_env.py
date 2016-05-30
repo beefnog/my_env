@@ -16,9 +16,9 @@ m, t = a.method, a.target
 host = os.uname()[1].split('.')[0]
 
 # filenames
-fname_bash = '.bashrc'
-fname_vim = '.vimrc'
-fname_screen = '.screenrc'
+fname_bash = '~/.bashrc'
+fname_vim = '~/.vimrc'
+fname_screen = '~/.screenrc'
 
 # create contents of each file based upon the target architecture
 
