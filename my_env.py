@@ -17,9 +17,9 @@ host = os.uname()[1].split('.')[0]
 
 # filenames
 home = os.environ['HOME']
-fname_bash = home + '.bashrc'
-fname_vim = home + '.vimrc'
-fname_screen = home + '.screenrc'
+fname_bash = home + '/.bashrc'
+fname_vim = home + '/.vimrc'
+fname_screen = home + '/.screenrc'
 
 # create contents of each file based upon the target architecture
 
