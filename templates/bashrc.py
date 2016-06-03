@@ -13,7 +13,7 @@ header = r"""
 export CLICOLOR=1
 
 # default user, blue @, default hostname, blue cwd, cyan $
-PS1='\[\033[0;37m\]\u\[\033[0;34m\]@\[\033[0;37m\]\h \[\033[0;34m\]\w\[\033[0;36m\]\$ \[\033[0m\]'
+PS1='\[\033[0;39m\]\u\[\033[0;34m\]@\[\033[0;39m\]\h \[\033[0;34m\]\w\[\033[0;36m\]\$ \[\033[0m\]'
 # PS1='\u@\h \w \$ ' # non-colored template
 
 # generally useful aliases
