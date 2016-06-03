@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os # only used to get the hostname
+import os # used to get hostname, home directory
 import argparse
 
 import templates.bashrc # contained within this repository
@@ -16,9 +16,10 @@ m, t = a.method, a.target
 host = os.uname()[1].split('.')[0]
 
 # filenames
-fname_bash = '~/.bashrc'
-fname_vim = '~/.vimrc'
-fname_screen = '~/.screenrc'
+home = os.environ['HOME']
+fname_bash = home + '.bashrc'
+fname_vim = home + '.vimrc'
+fname_screen = home + '.screenrc'
 
 # create contents of each file based upon the target architecture
 
