@@ -1,7 +1,7 @@
 header = r"""
 # .screenrc
 
-# termcapinfo xterm* ti@:te@
+term xterm-256color
 vbell off
 
 # this is just for silly messages. seriously.
