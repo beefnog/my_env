@@ -1,0 +1,6 @@
+Installation
+----
+* this file typically goes in .config/conky/
+* edit the file to match the number of logical cores on your machine
+* TODO: simple script to build a conky.conf with the appropriate number of cores
+
