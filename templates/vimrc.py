@@ -1,8 +1,7 @@
 header = r"""
 " .vimrc
 
-" blowfish is *way* more secure than the old vim crypt method
-setlocal cm=blowfish
+setlocal cm=blowfish2
 
 "set tabstop=4
 "set shiftwidth=4
