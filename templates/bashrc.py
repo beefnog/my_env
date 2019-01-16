@@ -11,6 +11,7 @@ def per_host_aliases(hname):
 header = r"""
 # this should work across everything...
 export CLICOLOR=1
+export EDITOR=/usr/bin/vim
 
 # default user, blue @, default hostname, blue cwd, cyan $
 PS1='\[\033[0;39m\]\u\[\033[0;34m\]@\[\033[0;39m\]\h \[\033[0;34m\]\w\[\033[0;36m\]\$ \[\033[0m\]'
