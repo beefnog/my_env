@@ -11,7 +11,11 @@ set number
 set ai
 set hlsearch
 set laststatus=2
+
 set statusline=%t%m%r%h%w\ [lang=%Y]\ [a=\%03.3b\|0x\%02.2B]\ [p=%l,%v][%p%%]
 hi StatusLine ctermbg=green ctermfg=black
+
+set mouse=
+set ttymouse=
 """
 
