@@ -14,8 +14,8 @@ export CLICOLOR=1
 export EDITOR=/usr/bin/vim
 
 # default user, blue @, default hostname, blue cwd, cyan $
-PS1='\[\033[0;39m\]\u\[\033[0;34m\]@\[\033[0;39m\]\h \[\033[0;34m\]\w\[\033[0;36m\]\$ \[\033[0m\]'
-# PS1='\u@\h \w \$ ' # non-colored template
+PS1='\[\033[0;39m\]\u\[\033[0;34m\]@\[\033[0;39m\]\h \[\033[0;34m\]\W\[\033[0;36m\]\$ \[\033[0m\]'
+# PS1='\u@\h \W \$ ' # non-colored template
 
 # generally useful aliases
 if [ -f ~/.bash_aliases ]
