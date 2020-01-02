@@ -57,6 +57,11 @@ modeline.python ()
         echo "# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4"
 }
 
+modeline.yaml ()
+{
+        echo "# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2"
+}
+
 # sleep.verbose accepts an integer sleep time, gives periodic updates on time remaining.
 sleep.verbose () {
 
