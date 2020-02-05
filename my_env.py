@@ -8,11 +8,10 @@ import templates.vimrc
 
 
 parser = argparse.ArgumentParser(description='This program will create my environment files.')
-parser.add_argument('--method', required = True, help = 'Value of { write | symlink }')
 parser.add_argument('--target', help = 'Value of { linux | osx }')
 a = parser.parse_args()
 
-m, t = a.method, a.target
+t = a.target
 host = os.uname()[1].split('.')[0]
 
 # filenames
@@ -46,15 +45,10 @@ content_screen += templates.screenrc.header
 # nothing more implemented / segregated at this time
 
 
-# if the method is "write", then write the files directly into my home.
-# if the method is "symlink", then write the files in CWD and create symlinks from home.
-if m == 'write':
-	with open(fname_bash, 'w') as f:
-		f.write(content_bash)
-	with open(fname_vim, 'w') as f:
-		f.write(content_vim)
-	with open(fname_screen, 'w') as f:
-		f.write(content_screen)
-# if m == 'symlink':
-	# TODO: implement this...
+with open(fname_bash, 'w') as f:
+	f.write(content_bash)
+with open(fname_vim, 'w') as f:
+	f.write(content_vim)
+with open(fname_screen, 'w') as f:
+	f.write(content_screen)
 
