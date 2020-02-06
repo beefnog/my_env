@@ -8,7 +8,7 @@ import templates.vimrc
 
 
 parser = argparse.ArgumentParser(description='This program will create my environment files.')
-parser.add_argument('--target', help = 'Value of { linux | osx }')
+parser.add_argument('--target', help = 'Value of { linux | osx }', default = "linux")
 a = parser.parse_args()
 
 t = a.target
