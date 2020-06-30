@@ -62,6 +62,11 @@ modeline.yaml ()
         echo "# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2"
 }
 
+modeline.js ()
+{
+        echo -e "/*\n# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2\n*/"
+}
+
 # sleep.verbose accepts an integer sleep time, gives periodic updates on time remaining.
 sleep.verbose () {
 
