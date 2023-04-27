@@ -52,19 +52,24 @@ functions = r"""
 # functions
 ################
 # vim modeline injector
+modeline.js ()
+{
+        echo -e "/*\n# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2\n*/"
+}
+
 modeline.python ()
 {
         echo "# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4"
 }
 
+modeline.swift()
+{
+        echo -e "/*\n# vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4\n*/"
+}
+
 modeline.yaml ()
 {
         echo "# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2"
-}
-
-modeline.js ()
-{
-        echo -e "/*\n# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2\n*/"
 }
 
 # sleep.verbose accepts an integer sleep time, gives periodic updates on time remaining.

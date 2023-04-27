@@ -1,0 +1,16 @@
+FROM debian:latest
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update
+RUN apt-get install -y vim build-essential gdb net-tools git python3 screen htop iperf
+
+WORKDIR /root
+RUN git clone https://github.com/beefnog/my_env
+
+WORKDIR /root/my_env
+RUN python3 my_env.py --target=linux
+
+WORKDIR /root
+CMD /bin/bash
+
