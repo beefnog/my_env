@@ -101,5 +101,60 @@ sleep.verbose () {
         done
 }
 
+# temp directory manipulation
+SCRATCH_DIR_ROOT=~/.scratch_dirs
+scratch.create() {
+        if [[ -z $1 ]]; then
+                echo "Usage: scratch.create <shortname>\n"
+                echo "A symlink to a temp directory will be created at $SCRATCH_DIR_ROOT/<shortname>"
+                return
+        else
+                local SHORTNAME=$1
+        fi
+
+        # sanity / new system check
+        if [ ! -d $SCRATCH_DIR_ROOT ]; then
+                echo "INFO: creating $SCRATCH_DIR_ROOT..."
+                mkdir $SCRATCH_DIR_ROOT
+        fi
+
+        local NEW_DIR=`mktemp -d`
+
+        # do not orphan existing scratch dirs
+        if [ ! -e $SCRATCH_DIR_ROOT/$SHORTNAME ]; then
+                ln -s $NEW_DIR $SCRATCH_DIR_ROOT/$SHORTNAME
+        else
+                echo "$SHORTNAME is already in use; no work performed."
+        fi
+}
+
+scratch.discard() {
+        if [[ -z $1 ]]; then
+                echo "Usage: scratch.discard <shortname>\n"
+                echo "Unlinks $SCRATCH_DIR_ROOT/<shortname> -- DOES NOT unlink temp directory contents."
+                return
+        else
+                local SHORTNAME=$1
+        fi
+
+        rm $SCRATCH_DIR_ROOT/$SHORTNAME
+}
+
+scratch.enter() {
+        if [[ -z $1 ]]; then
+                echo "Usage: scratch.enter <shortname>\n"
+                echo "Attempts to cd to $SCRATCH_DIR_ROOT/<shortname>"
+                return
+        else
+                local SHORTNAME=$1
+        fi
+
+        cd $SCRATCH_DIR_ROOT/$SHORTNAME
+}
+
+scratch.list() {
+        ls -Fl $SCRATCH_DIR_ROOT
+}
+
 """
 
