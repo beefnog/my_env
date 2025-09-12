@@ -52,6 +52,11 @@ functions = r"""
 # functions
 ################
 # vim modeline injector
+modeline.c ()
+{
+	echo "// vim: tabstop=4 shiftwidth=4 softtabstop=4"
+}
+
 modeline.js ()
 {
         echo -e "/*\n# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2\n*/"
