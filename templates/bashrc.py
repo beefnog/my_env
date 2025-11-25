@@ -23,6 +23,7 @@ then
 	. ~/.bash_aliases
 fi
 
+alias term.getsize="echo $(tput cols) x $(tput lines)"
 """
 
 grep_osx = r"""
