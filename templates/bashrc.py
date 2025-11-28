@@ -23,7 +23,6 @@ then
 	. ~/.bash_aliases
 fi
 
-alias term.getsize="echo $(tput cols) x $(tput lines)"
 """
 
 grep_osx = r"""
@@ -160,6 +159,10 @@ scratch.enter() {
 
 scratch.list() {
         ls -Fl $SCRATCH_DIR_ROOT
+}
+
+term.getsize() {
+	stty -a | grep col | awk '{ printf "%i x %i\n", $6, $4 }'
 }
 
 """
