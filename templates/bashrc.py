@@ -162,7 +162,8 @@ scratch.list() {
 }
 
 term.getsize() {
-	stty -a | grep col | awk '{ printf "%i x %i\n", $6, $4 }'
+	# stty -a | grep col | awk '{ printf "%i x %i\n", $6, $4 }'
+	stty size | awk '{ printf "%i x %i\n", $2, $1 }'
 }
 
 """
