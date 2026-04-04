@@ -11,6 +11,8 @@ set number
 set ai
 set hlsearch
 set laststatus=2
+set wrap
+set linebreak
 
 set modeline
 set modelines=5
