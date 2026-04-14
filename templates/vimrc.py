@@ -1,7 +1,7 @@
 header = r"""
 " .vimrc
 
-setlocal cm=blowfish2
+setlocal cm=xchacha20v2
 
 "set tabstop=4
 "set shiftwidth=4
