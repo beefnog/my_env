@@ -5,6 +5,7 @@ import argparse
 import templates.bashrc # contained within this repository
 import templates.screenrc
 import templates.vimrc
+import templates.xresources
 
 
 parser = argparse.ArgumentParser(description='This program will create my environment files.')
@@ -19,6 +20,7 @@ home = os.environ['HOME']
 fname_bash = home + '/.bashrc'
 fname_vim = home + '/.vimrc'
 fname_screen = home + '/.screenrc'
+fname_xres = home + '/.Xresources'
 
 # create contents of each file based upon the target architecture
 
@@ -44,6 +46,9 @@ content_screen = ""
 content_screen += templates.screenrc.header
 # nothing more implemented / segregated at this time
 
+# Xresources -- basically just xterm
+content_xres = ""
+content_xres += templates.xresources.header
 
 with open(fname_bash, 'w') as f:
 	f.write(content_bash)
@@ -51,4 +56,6 @@ with open(fname_vim, 'w') as f:
 	f.write(content_vim)
 with open(fname_screen, 'w') as f:
 	f.write(content_screen)
+with open(fname_xres, 'w') as f:
+	f.write(content_xres)
 
